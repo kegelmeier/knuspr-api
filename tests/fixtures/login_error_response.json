@@ -1,0 +1,10 @@
+{
+  "status": 401,
+  "data": null,
+  "messages": [
+    {
+      "type": "error",
+      "content": "Invalid email or password"
+    }
+  ]
+}

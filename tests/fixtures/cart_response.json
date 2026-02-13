@@ -1,0 +1,26 @@
+{
+  "status": 200,
+  "data": {
+    "totalPrice": 4.27,
+    "canMakeOrder": true,
+    "items": {
+      "1001": {
+        "orderFieldId": "of-abc-123",
+        "productName": "Bio Vollmilch 3,5%",
+        "quantity": 2,
+        "price": 2.98,
+        "primaryCategoryName": "Milch & Milchprodukte",
+        "brand": "Berchtesgadener Land"
+      },
+      "1002": {
+        "orderFieldId": "of-def-456",
+        "productName": "Frische Vollmilch",
+        "quantity": 1,
+        "price": 1.29,
+        "primaryCategoryName": "Milch & Milchprodukte",
+        "brand": "Weihenstephan"
+      }
+    }
+  },
+  "messages": []
+}

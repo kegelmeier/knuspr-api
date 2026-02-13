@@ -1,0 +1,42 @@
+{
+  "status": 200,
+  "data": {
+    "productList": [
+      {
+        "productId": 1001,
+        "productName": "Bio Vollmilch 3,5%",
+        "price": {"full": 1.49, "currency": "EUR"},
+        "brand": "Berchtesgadener Land",
+        "textualAmount": "1 l",
+        "badge": null,
+        "favourite": false,
+        "inStock": true,
+        "imgPath": "/images/products/1001.jpg"
+      },
+      {
+        "productId": 1002,
+        "productName": "Frische Vollmilch",
+        "price": 1.29,
+        "brand": "Weihenstephan",
+        "textualAmount": "1 l",
+        "badge": null,
+        "favourite": true,
+        "inStock": true,
+        "imgPath": "/images/products/1002.jpg"
+      },
+      {
+        "productId": 9999,
+        "productName": "Sponsored Milk Product",
+        "price": 2.99,
+        "brand": "SponsorBrand",
+        "textualAmount": "500 ml",
+        "badge": "promoted",
+        "favourite": false,
+        "inStock": true,
+        "imgPath": "/images/products/9999.jpg"
+      }
+    ],
+    "totalCount": 42
+  },
+  "messages": []
+}

@@ -1,0 +1,18 @@
+{
+  "status": 200,
+  "data": {
+    "user": {
+      "id": 12345,
+      "email": "test@example.com",
+      "firstName": "Test",
+      "lastName": "User"
+    },
+    "address": {
+      "id": 67890,
+      "street": "Musterstraße 1",
+      "city": "München",
+      "zip": "80331"
+    }
+  },
+  "messages": []
+}
