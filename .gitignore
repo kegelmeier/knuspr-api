@@ -14,3 +14,18 @@ venv/
 .ruff_cache/
 *.so
 .DS_Store
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Type stubs
+.pytype/
