@@ -1,6 +1,6 @@
 [project]
 name = "knuspr-api"
-version = "0.2.0"
+version = "0.3.0"
 description = "Python wrapper for the Knuspr.de grocery delivery API"
 readme = "README.md"
 license = "MIT"
