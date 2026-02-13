@@ -1,6 +1,7 @@
 # knuspr-api
 
 [![PyPI](https://img.shields.io/pypi/v/knuspr-api)](https://pypi.org/project/knuspr-api/)
+[![CI](https://github.com/kegelmeier/knuspr-api/actions/workflows/ci.yml/badge.svg)](https://github.com/kegelmeier/knuspr-api/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/pypi/pyversions/knuspr-api)](https://pypi.org/project/knuspr-api/)
 [![License](https://img.shields.io/pypi/l/knuspr-api)](https://github.com/kegelmeier/knuspr-api/blob/main/LICENSE)
 

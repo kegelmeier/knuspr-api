@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-02-13
+
+### Added
+
+- CI workflow: lint (ruff) and test (pytest) on push/PR across Python 3.11, 3.12, 3.13
+- CD workflow: automatic PyPI publishing on version tag push via trusted publishing
+- CI status badge in README
+
 ## [0.1.0] - 2025-02-13
 
 ### Added
