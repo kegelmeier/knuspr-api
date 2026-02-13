@@ -191,9 +191,8 @@ class TestErrorHandling:
             return_value=Response(429)
         )
 
-        with KnusprClient(config=config) as client:
-            with pytest.raises(RateLimitError):
-                client.search_products("test")
+        with KnusprClient(config=config) as client, pytest.raises(RateLimitError):
+            client.search_products("test")
 
     @respx.mock
     def test_session_expired(self, config: KnusprConfig) -> None:
@@ -202,6 +201,5 @@ class TestErrorHandling:
             return_value=Response(401)
         )
 
-        with KnusprClient(config=config) as client:
-            with pytest.raises(AuthenticationError):
-                client.search_products("test")
+        with KnusprClient(config=config) as client, pytest.raises(AuthenticationError):
+            client.search_products("test")

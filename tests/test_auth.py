@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import httpx
 import pytest
 import respx
 from httpx import Response
@@ -7,9 +8,6 @@ from httpx import Response
 from knuspr.auth import AuthHandler
 from knuspr.config import KnusprConfig
 from knuspr.exceptions import APIError, AuthenticationError
-
-import httpx
-
 
 BASE_URL = "https://www.knuspr.de"
 
@@ -46,9 +44,10 @@ class TestLogin:
         respx.post(f"{BASE_URL}/services/frontend-service/login").mock(
             return_value=Response(401)
         )
-        with httpx.Client() as client:
-            with pytest.raises(AuthenticationError, match="Invalid credentials"):
-                auth.login(client)
+        with httpx.Client() as client, pytest.raises(
+            AuthenticationError, match="Invalid credentials"
+        ):
+            auth.login(client)
 
         assert auth.is_authenticated is False
 
@@ -59,9 +58,10 @@ class TestLogin:
         respx.post(f"{BASE_URL}/services/frontend-service/login").mock(
             return_value=Response(200, json=login_error_response)
         )
-        with httpx.Client() as client:
-            with pytest.raises(AuthenticationError, match="Invalid credentials"):
-                auth.login(client)
+        with httpx.Client() as client, pytest.raises(
+            AuthenticationError, match="Invalid credentials"
+        ):
+            auth.login(client)
 
     @respx.mock
     def test_login_api_error(self, auth: AuthHandler) -> None:
@@ -73,9 +73,10 @@ class TestLogin:
         respx.post(f"{BASE_URL}/services/frontend-service/login").mock(
             return_value=Response(200, json=error_response)
         )
-        with httpx.Client() as client:
-            with pytest.raises(APIError, match="Internal server error"):
-                auth.login(client)
+        with httpx.Client() as client, pytest.raises(
+            APIError, match="Internal server error"
+        ):
+            auth.login(client)
 
 
 class TestLogout:

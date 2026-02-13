@@ -123,7 +123,9 @@ class KnusprClient:
         results = []
         for p in raw_products:
             badge = p.get("badge")
-            if badge and isinstance(badge, str) and "promoted" in badge.lower():
+            if isinstance(badge, list) and any(
+                b.get("slug") == "promoted" for b in badge if isinstance(b, dict)
+            ):
                 continue
             results.append(SearchResult.model_validate(p))
         return results

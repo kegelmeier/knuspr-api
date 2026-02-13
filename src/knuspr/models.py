@@ -13,7 +13,7 @@ class SearchResult(BaseModel):
     price: Any = None
     brand: str = ""
     amount: str = Field("", alias="textualAmount")
-    badge: str | None = None
+    badge: list[dict] | None = None
     favourite: bool = False
     in_stock: bool = Field(True, alias="inStock")
     image_path: str | None = Field(None, alias="imgPath")

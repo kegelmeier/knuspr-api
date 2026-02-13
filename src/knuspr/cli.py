@@ -17,7 +17,9 @@ def _get_client() -> KnusprClient:
 
 def _handle_error(e: Exception) -> None:
     if isinstance(e, AuthenticationError):
-        console.print("[red]Authentication failed. Check KNUSPR_USERNAME and KNUSPR_PASSWORD.[/red]")
+        console.print(
+            "[red]Authentication failed. Check KNUSPR_USERNAME and KNUSPR_PASSWORD.[/red]"
+        )
     elif isinstance(e, KnusprError):
         console.print(f"[red]Error: {e}[/red]")
     else:
